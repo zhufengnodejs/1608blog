@@ -14,7 +14,7 @@ lib
 npm init -y
 ```
 ### 1.5.创建bower配置文件bower.json
-配置此项目依赖哪些前端框架
+配置此项目依赖哪些前端框架，如jquery bootstrap
 ```
 bower init
 ```
@@ -35,3 +35,15 @@ git commit -m"init"
 git remote add origin https://github.com/zhufengnodejs/1608blog.git
 git push -u origin master
 ```
+
+## 2. 安装依赖的前端和后端框架
+前端依赖
+```
+bower install bootstrap --save
+```
+后端依赖
+```
+npm install express body-parser mongoose --save
+```
+
+## 3. 配置路由
