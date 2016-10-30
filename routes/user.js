@@ -8,7 +8,9 @@ router.get('/signup',function(req,res){
 router.post('/signup',function(req,res){
    var user = req.body;
    User.create(user).then(function(doc){
-        res.redirect('/');
+       //当注册成功之后把保存后的用户对象保存在session中
+       req.session.user = doc;
+       res.redirect('/');
    },function(error){
        res.redirect('back');
    });
