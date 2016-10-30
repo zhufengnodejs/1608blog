@@ -47,3 +47,14 @@ npm install express body-parser mongoose --save
 ```
 
 ## 3. 配置路由
+```
+/**
+ * / 首页
+ *
+ * /user/signUp 注册
+ * /user/signIn 登录
+ * /user/signOut 退出
+ *
+ * /article/add 发表文章
+ */
+```
