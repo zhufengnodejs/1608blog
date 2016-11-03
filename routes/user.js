@@ -19,6 +19,7 @@ router.get('/signin',function(req,res){
     res.render('user/signin',{title:'注册'});
 });
 router.get('/signout',function(req,res){
+    req.session.user = null;
     res.redirect('/');
 });
 
