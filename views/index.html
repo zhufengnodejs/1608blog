@@ -1,3 +1,19 @@
 <%-include include/header.html%>
-<%=title%>
+<%
+articles.forEach(function(article){%>
+<div class="media">
+    <a class="media-left" href="#">
+        <img src="http://secure.gravatar.com/avatar/md5" alt="">
+    </a>
+    <div class="media-body">
+        <h4 class="media-heading">
+            <a href="/article/detail/<%=article._id%>"><%=article.title%></a>
+        </h4>
+        <p><%-article.content.length<=50?article.content:article.content.slice(0,50)+'......'%></p>
+    </div>
+</div>
+<%});
+%>
+
+
 <%-include include/footer.html%>

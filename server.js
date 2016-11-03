@@ -2,6 +2,7 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var session = require('express-session');
+var MongoStore = require('connect-mongo')(session);
 var app = express();
 
 //静态文件中间件 /lib/jquery/dist/jquery.js
@@ -12,7 +13,11 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(session({
     resave:true,
     saveUninitialized:true,
-    secret:'zfpx'
+    secret:'zfpx',
+    cookie:{maxAge:1000000000*1000},
+    store:new MongoStore({
+        url:'mongodb://127.0.0.1/1608blog'
+    })
 }));
 //加载模板引擎
 app.set('view engine','html');

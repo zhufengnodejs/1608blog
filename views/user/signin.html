@@ -1,3 +1,29 @@
 <%-include ../include/header.html%>
-<%=title%>
+<form method="post" class="form-horizontal">
+    <div class="form-group">
+        <label for="username" class="control-label col-md-2">用户名</label>
+
+        <div class="col-md-10">
+            <div class="input-group">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                <input type="text" class="form-control" id="username" placeholder="请输入用户名" name="username">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password" class="control-label col-md-2">密码</label>
+
+        <div class="col-md-10">
+            <div class="input-group">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                <input type="password" class="form-control" id="password" placeholder="请输入密码" name="password">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit" class="btn btn-primary">提交</button>
+        </div>
+    </div>
+</form>
 <%-include ../include/footer.html%>

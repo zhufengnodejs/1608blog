@@ -1,3 +1,23 @@
 <%-include ../include/header.html%>
-<%=title%>
+<form action="/article/add?_id=<%=article._id%>" method="post" class="form-horizontal">
+    <div class="form-group">
+        <label for="title" class="control-label col-md-2">标题</label>
+
+        <div class="col-md-10">
+                <input type="text" class="form-control" id="title" placeholder="请输入标题" value="<%=article.title%>" name="title">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="content" class="control-label col-md-2">正文</label>
+
+        <div class="col-md-10">
+                <textarea class="form-control" name="content" id="content" cols="30" placeholder="请输入正文" rows="10"><%=article.content%></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit" class="btn btn-primary">提交</button>
+        </div>
+    </div>
+</form>
 <%-include ../include/footer.html%>
